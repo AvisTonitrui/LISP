@@ -1,0 +1,23 @@
+.main {
+	background-color: #eeeed1;
+	width: 100%;
+}
+
+.info-header {
+	color: #ae0f0f;
+	text-align: center;
+}
+
+.category {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.category-link {
+	text-align: right;
+}
+
+a {
+	color: #ae0f0f;
+}
