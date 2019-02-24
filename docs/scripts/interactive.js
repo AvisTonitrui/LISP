@@ -43,6 +43,7 @@ function newDialogue(option) {
 	dialogueNum += 1;
 }
 
+//for selecting one of the options
 function optionChoice(correct, failText) {
 	//if correct, proceed with the story
 	if (correct) {
@@ -62,10 +63,26 @@ function optionChoice(correct, failText) {
 	//otherwise we give the fail text
 	else {
 		//set the fail dialogue
-		dialogueText = failText;
+		dialogueText.innerHTML = failText;
 		
 		//clear the options
 		option1.innerHTML = "";
 		option2.innerHTML = "";
 	}
+}
+
+//resets the interactive experience
+function reset() {
+	//reset to the beginning dialogue
+	dialogueText.innerHTML = "Press the Next button to start the interactive experience.";
+	
+	//clear the options
+	option1.innerHTML = "";
+	option2.innerHTML = "";
+	
+	//set up the next button for the first dialogue option
+	nextButton.innerHTML = "<button type=\"button\" onclick=\"newDialogue(" + dialogueOptions[0][0] + ")\">Next</button>";
+	
+	//reset dialogueNum
+	dialogueNum = 0;
 }
