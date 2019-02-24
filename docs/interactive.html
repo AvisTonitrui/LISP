@@ -15,32 +15,28 @@
       <div class="interactive">
         <!-- the top portion of the interactive experience -->
         <div class="top">
-        <!-- The graphic for the interactive experience -->
-        <div id="graphic"><img src="images/BlackScreen.png" alt="A black screen"></div>
-        
-        <!-- The options area -->
-        <div class="options">
-          <ul>
-            <li id="option1"></li>
-            <li id="option2"></li>
-          </ul>
+          <!-- The graphic for the interactive experience -->
+          <div id="graphic"><img src="images/BlackScreen.png" alt="A black screen"></div>        
+          
+          <div class="right">
+            <!-- Where the story of the interactive experience happens -->
+            <div class="dialogue">
+              <p id="dialogue-text">Press the Next button to start the interactive experience.</p>
+              <div id="next-button"><button type="button" onclick="newDialogue(false, [])">Next</button></div>
+            </div>
+            
+            <!-- the options buttons -->
+            <p id="option1"></p>
+            <p id="option2"></p>
+            
+            <!-- the restart button -->
+            <div class="reset-button"><button type="button" onclick="reset()">Reset</button></div>
+          </div>
+          
+          <!-- link the interactive Javascript in -->
+          <script src="scripts/interactive.js"></script>
         </div>
-        </div>
-        
-        <!-- Where the story of the interactive experience happens -->
-        <div class="dialogue">
-          <p id="dialogue-text">Press the Next button to start the interactive experience.</p>
-          <div id="next-button"><button type="button" onclick="newDialogue(false, [])">Next</button></div>
-        </div>
-        
-        <!-- link the interactive Javascript in -->
-        <script src="scripts/interactive.js"></script>
       </div>
-      
-      <!-- the buttons to both reset the interactive experience and to go to the proper information tab -->
-      <div class="info-button"></div>
-      
-      <div class="reset-button"><button type="button" onclick="reset()">Reset</button></div>
       
     </div>
     

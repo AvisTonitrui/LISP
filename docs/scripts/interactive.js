@@ -10,9 +10,10 @@ dialogueNum = 0;
 
 //the giant list of dialogue options
 dialogueOptions = [
-		[false, "Lorem Ipsum", "", ""],
-		[true, "Ipsum Lorem", '<button type="button" onclick=\'optionChoice(true, "")\'>Test</button>', "<button type=\"button\" onclick=\"optionChoice(false, failTexts[0])\">Test</button>"],
-		[false, "You chose correctly", "", ""]
+		[false, "Lorem Ipsum", "", "", ""],
+		[true, "Ipsum Lorem", '<button type="button" onclick=\'optionChoice(true, "")\'>Test</button>', "<button type=\"button\" onclick=\"optionChoice(false, failTexts[0])\">Test</button>", ""],
+		[false, "You chose correctly", "", "", ""],
+		[false, "Temp", "", "", ""]
 	];
 
 //all of the failure dialogues
@@ -22,19 +23,22 @@ failTexts = [
 
 //pulls up new dialogue and options if applicable
 function newDialogue(option) {
+	//change the image if applicable
+	console.log(dialogueOptions[dialogueNum][4]);
+	if (dialogueOptions[dialogueNum][4] != "") {
+		graphic.innerHTML = "<img src=\"images/" + dialogueOptions[dialogueNum][4] + "\"";
+	}
+	
 	//set the new dialogue
 	dialogueText.innerHTML = dialogueOptions[dialogueNum][1];
 	
 	//set up the options
-	console.log("Should be changing the options");
-	console.log(dialogueOptions[dialogueNum][2]);
-	console.log(dialogueOptions[dialogueNum][3]);
 	option1.innerHTML = dialogueOptions[dialogueNum][2];
 	option2.innerHTML = dialogueOptions[dialogueNum][3];
 	
 	//set up the next button for the next dialogue option
 	if(option) {
-		nextButton.innerHTML = "<button type=\"button\" disabled>Next</button>";
+		nextButton.innerHTML = "<button type=\"button\" disabled class=\"hidden\">Next</button>";
 	} else {
 		nextButton.innerHTML = "<button type=\"button\" onclick=\"newDialogue(" + dialogueOptions[dialogueNum + 1][0] + ")\">Next</button>";
 	}
