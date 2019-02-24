@@ -1,0 +1,4 @@
+LISSP-Learning Information Systems Security Professional
+About- We are a website aimed at the edutainment of Information System Secuirty. Our goals are to inform, educate, and entertain general internet users on basic CISSP principles, in order to promote
+a safer and more secure internet. We know that the first step in achieving more security and safety on a system is a well informed user. Therefore, we try to stress the importance of a simple and interactive
+teaching method. We leverage the use of gamification in order to put the user in the security problems themselves!
