@@ -23,5 +23,11 @@ a {
 }
 
 #graphic {
-	width: 80%;
+	width: 70%;
+	float: left;
+}
+
+img {
+	max-height: 100%;
+	max-width: 100%;
 }
